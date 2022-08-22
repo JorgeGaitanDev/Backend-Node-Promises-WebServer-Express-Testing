@@ -1,9 +1,6 @@
-
-function ejemplo(hola) {
-  console.log(hola);
+let hola = 'Hello Jorge';
+for (var i=0; i<5; i++) {
+  console.log(i);
 }
-
-ejemplo(1);
-ejemplo('toni');
-ejemplo(3);
-
+console.log(hola);
+console.log('Jorge Exit');

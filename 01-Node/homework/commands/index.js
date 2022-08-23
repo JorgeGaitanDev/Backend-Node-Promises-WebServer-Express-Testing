@@ -6,9 +6,7 @@ var request = require('request');
 module.exports = {
 	date: function (args, print){
 		print(Date());
-		for (var i =0; i < 10; i++) {
-				console.log([i]);
-		}
+	console.log('hola');
 	},
 	pwd: function (args, done){
 		done(process.cwd());

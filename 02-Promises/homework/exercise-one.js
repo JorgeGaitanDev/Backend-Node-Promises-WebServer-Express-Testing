@@ -44,14 +44,15 @@ function problemA () {
    */
 
   // callback version
-  readFile('poem-one/stanza-01.txt', function (err, stanza) {
-    console.log('-- A. callback version --');
-    blue(stanza);
-  });
+  //readFile('poem-one/stanza-01.txt', function (err, stanza) {
+    //console.log('-- A. callback version --');
+    //blue(stanza);
+  //});
 
   // promise version
   // ???
-
+  promisifiedReadFile('poem-one/stanza-01.txt')
+  .then(stanza => blue(stanza));
 }
 
 function problemB () {
@@ -63,18 +64,22 @@ function problemB () {
    */
 
   // callback version
-  readFile('poem-one/stanza-02.txt', function (err, stanza2) {
+  /*readFile('poem-one/stanza-02.txt', function (err, stanza2) {
     console.log('-- B. callback version (stanza two) --');
     blue(stanza2);
   });
   readFile('poem-one/stanza-03.txt', function (err, stanza3) {
     console.log('-- B. callback version (stanza three) --');
     blue(stanza3);
-  });
+  }); */
 
   // promise version
   // ???
+  promisifiedReadFile('poem-one/stanza-02.txt')
+  .then(stanza2 => blue(stanza2));
 
+  promisifiedReadFile('poem-one/stanza-03.txt')
+  .then(stanza2 => blue(stanza3));
 }
 
 function problemC () {
